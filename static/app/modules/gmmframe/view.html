@@ -1,0 +1,12 @@
+<link ng-if="pageData.cssFile != undefined && pageData.cssFile != ''" rel="stylesheet" href="{{pageData.cssFile}}"/>
+
+<div class="container-fluid">
+    <div class="form-group">
+        <iframe ng-src="{{frameSrc}}"  width="100%" height="580" frameborder="0"></iframe>
+   </div>   
+	<div class="form-group">
+	<div>
+			<button ng-repeat="btn in pageData.pageButtons track by $index" ng-click="btnClick($index)" class="btn btn-primary" style="margin-right:3px">{{btn.name}}</button>
+		</div>
+	</div>
+</div>

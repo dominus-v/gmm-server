@@ -1,0 +1,39 @@
+<div class="container-fluid">
+	<img class="page-header-img" ng-if="pageData.headerImg != undefined" ng-src="{{pageData.headerImg}}"/>
+	<h1>{{pageData.pageName}}</h1>
+	<p>{{pageData.introText}}</p>
+
+	<form class="form-horizontal" role="form">
+		<div class="form-group">
+			<label for="cbName" class="col-sm-2 control-label">Name</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="cbName" ng-model="callbackForm.name" required>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="cbPhone" class="col-sm-2 control-label" ng-model="callbackForm.phone">Phone</label>
+			<div class="col-sm-10">
+				<input type="number" class="form-control" id="cbPhone" required>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="cbDate" class="col-sm-2 control-label" ng-model="callbackForm.phone">Date</label>
+			<div class="col-sm-10">
+				<input type="datetime" date-time ng-model="start">
+			</div>
+		</div>
+
+
+
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button ng-repeat="btn in pageData.pageButtons track by $index" ng-click="btnClick($index)" class="btn btn-primary" style="margin-right:3px">{{btn.name}}</button>
+			</div>
+		</div>
+	</form>
+
+	<p>{{pageData.bottomText}}</p>
+
+</div>

@@ -1,0 +1,24 @@
+// Going to describe here how the application works in conjunction with orchestration server.
+
+Packages used:
+* express     - web application framework for node.js
+              - https://www.npmjs.com/package/express
+* cors        - middleware for express to enable 'cross-origin resource sharing (CORS)'
+              - CORS - is a mechanism that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served
+              - https://www.npmjs.com/package/cors
+* socket.io   - enables real-time bidirectional event-based communication
+              - https://www.npmjs.com/package/socket.io
+* http        - ???
+
+* http-proxy  - HTTP programmable proxying library that supports websockets
+              - https://www.npmjs.com/package/http-proxy
+* morgan      - HTTP request logger middleware for node.js
+              - https://www.npmjs.com/package/morgan
+* fs          - ??? probably method to work with files and file system.
+
+* nconf       - Hierarchical node.js configuration with files, environment variables, command-line arguments, and atomic object merging.
+              - https://www.npmjs.com/package/nconf
+* underscore  - utility-belt library for JavaScript that provides support for the usual functional suspects (each, map, reduce, filter...) without extending any core JavaScript objects.
+              - https://www.npmjs.com/package/underscore
+* winser      - Run node.js applications as windows services using nssm.
+              - https://www.npmjs.com/package/winser

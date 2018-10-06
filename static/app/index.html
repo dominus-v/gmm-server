@@ -1,0 +1,135 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Genesys Multi Modal</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="-1"> -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="libs/ng-table/ng-table.css" />
+    <link rel="stylesheet" href="libs/angular-loading-bar/build/loading-bar.css" />
+    <link rel="stylesheet" href="libs/ark-style/dist/css/ark-css.css" />
+    <link rel="stylesheet" href="libs/ark-components/dist/styles/ark-components-min.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <link rel="stylesheet" href="styles/gmm.css" />
+    <link rel="stylesheet" href="styles/flex-video.css" />
+
+    <!-- build:css({.tmp,app}) styles/main.css -->
+	<script>
+		// When ready...
+		window.addEventListener("load",function() {
+			// Set a timeout...
+			setTimeout(function(){
+				// Hide the address bar!
+				window.scrollTo(0, 1);
+				document.documentElement.requestFullscreen();
+			}, 0);
+		});
+	</script>
+    <!-- endbuild -->
+  </head>
+  <body ng-app="gmm">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div ng-view=""></div>
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="libs/es5-shim/es5-shim.js"></script>
+    <script src="libs/jquery/dist/jquery.js"></script>
+    <script src="libs/json3/lib/json3.min.js"></script>
+    <script src="libs/angular/angular.js"></script>
+    <script src="libs/angular-resource/angular-resource.js"></script>
+    <script src="libs/angular-cookies/angular-cookies.js"></script>
+    <script src="libs/angular-sanitize/angular-sanitize.js"></script>
+    <script src="libs/angular-route/angular-route.js"></script>
+    <script src="libs/angular-animate/angular-animate.js"></script>
+    <script src="libs/angular-mocks/angular-mocks.js"></script>
+    <script src="libs/underscore/underscore.js"></script>
+    <script src="libs/ng-table/ng-table.js"></script>
+    <script src="libs/timezone-js/src/date.js"></script>
+    <script src="libs/angular-loading-bar/build/loading-bar.js"></script>
+    <script src="libs/ark-style/dist/js/ark-css.js"></script>
+    <!-- endbower -->
+
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="libs/ark-components/dist/scripts/ark-components-min.js"></script>
+
+        <script src="scripts/config.js"></script>
+        <script src="scripts/app.js"></script>
+
+        <!-- Start: Journey Manager Modules -->
+            <script src="modules/main/ctrl.js"></script>
+            <script src="modules/main/directive.js"></script>
+
+            <script src="modules/start/ctrl.js"></script>
+            <script src="modules/start/directive.js"></script>
+
+            <script src="modules/welcome/ctrl.js"></script>
+            <script src="modules/welcome/directive.js"></script>
+
+            <script src="modules/nosession/ctrl.js"></script>
+            <script src="modules/nosession/directive.js"></script>
+
+            <script src="modules/auth/ctrl.js"></script>
+            <script src="modules/auth/directive.js"></script>
+
+            <script src="modules/menu/ctrl.js"></script>
+            <script src="modules/menu/directive.js"></script>
+
+            <script src="modules/page/ctrl.js"></script>
+            <script src="modules/page/directive.js"></script>
+
+            <script src="modules/comment/ctrl.js"></script>
+            <script src="modules/comment/directive.js"></script>
+
+            <script src="modules/gmmframe/ctrl.js"></script>
+            <script src="modules/gmmframe/directive.js"></script>
+
+            <script src="modules/agent/ctrl.js"></script>
+            <script src="modules/agent/directive.js"></script>
+
+            <script src="modules/dynagent/ctrl.js"></script>
+            <script src="modules/dynagent/directive.js"></script>
+
+            <script src="modules/test/ctrl.js"></script>
+            <script src="modules/test/directive.js"></script>
+
+        <!-- End: Journey Manager Modules -->
+
+        <script src="gmm-services/workspace-service.js"></script>
+        <script src="gmm-services/ors-service.js"></script>
+
+        <!-- endbuild -->
+		
+		<script src="libs/socket.io-client/socket.io.js"></script>
+
+</body>
+</html>

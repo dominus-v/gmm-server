@@ -1,0 +1,20 @@
+<link ng-if="pageData.cssFile != undefined && pageData.cssFile != ''" rel="stylesheet" href="{{pageData.cssFile}}"/>
+
+<div class="container-fluid">
+	<h1 ng-if="pageData.headerText != undefined || pageData.headerImg != undefined" ><img class="page-header-img" ng-if="pageData.headerImg != undefined" ng-src="{{pageData.headerImg}}"/> {{pageData.headerText}} </h1>
+	<h1>{{pageData.pageName}}</h1>
+	<p>{{pageData.introText}}</p>
+	
+	<div class="list-group">
+	  <a ng-repeat="item in pageData.menuItems track by $index" class="list-group-item" ng-click="menuItemSelected($index)">
+	  	{{item.name}}
+	  </a>
+	</div>
+
+	<div class="form-group">
+		<div>
+			<button ng-repeat="btn in pageData.pageButtons track by $index" ng-click="btnClick($index)" class="btn btn-primary" style="margin-right:3px">{{btn.name}}</button>
+		</div>
+	</div>
+	
+</div>

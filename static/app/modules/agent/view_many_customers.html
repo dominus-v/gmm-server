@@ -1,0 +1,61 @@
+<style>
+.btn {
+	margin-top:3px;
+	width:140px;
+	}
+</style>
+<div class="container-fluid">
+
+	<div class="jumbotron">
+
+		<div class="row">
+			<div class="col-md-6" style="">
+
+				<img src="images/gbank-logo.png" class="img-responsive"/>
+				<h1>Agent Control</h1>
+				<p>Send events to mobile client...</p>
+
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="inputSessionId" class="col-sm-2 control-label">Session ID</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="inputSessionId" ng-model="inputSessionId">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Documents</label>
+						<div class="col-sm-10">
+							<button ng-click="sendEvent({event: 'page', pageData:{pageName:'Certificate of Full Payment of Loan', headerImg: 'images/genesys-logo-mobile.png',  introText:'Certificate of Full Payment of Loan', bottomText:'The document is not ready yet.', pageButtons:[{name:'Disconnect',action:disconnect'}]}})" class="btn btn-primary">Certificate</button>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Organizations powered by Genesys</label>
+						<div class="col-sm-10">
+                        
+							<button ng-click="sendEvent({event: 'page', pageData:{pageName:'GBank', headerImg: 'images/gbank-logo.png', centerImg:'images/ms-tech.png', introText:'GBank is powered by Genesys.', bottomText:'Would you like to find out what customers have achieved with Genesys products?', pageButtons:[{name:'Disconnect',action:'disconnect'}]}})" class="btn btn-primary">GBank</button>
+                        
+							<button ng-click="sendEvent({event: 'page', pageData:{pageName:'Genesys Case Study - BSN', headerImg: 'images/genesys-logo-mobile.png',  introText:'BSN is a government-owned bank in Malaysia  ', bottomText:'Genesys helped BSN integrate seven disparate call centers running on different systems into a single platform.', videoSrc:'https://www.youtube.com/embed/0Gzpnl4DggU', pageButtons:[{name:'Disconnect',action:'disconnect'}]}})" class="btn btn-primary">BSN</button>
+							
+							<button ng-click="sendEvent({event: 'page', pageData:{pageName:'Lincoln Financial', headerImg: 'images/genesys-logo-mobile.png',  introText:'Lincoln Financial is a leading provider of financial services.', bottomText:'The company standardized on the Genesys Customer Experience Platform in its contact centers to transform the customer experience by enabling agents to service customers through multiple channels.', videoSrc:'https://www.youtube.com/embed/XU4f7xflLQE?autoplay=1', pageButtons:[{name:'Disconnect',action:'disconnect'}]}})" class="btn btn-primary">Lincoln Financial</button>
+                            
+							<button ng-click="sendEvent({event: 'page', pageData:{pageName:'Welsh Water', headerImg: 'images/genesys-logo-mobile.png',  introText:'Dwr Cymru Welsh Water supplies water, sewerage and trade effluent services.', bottomText:'Watch how Welsh Water makes their Customer Experience vision a reality with Genesys.', videoSrc:'https://www.youtube.com/embed/wRMXmdPY4yo?autoplay=1', pageButtons:[{name:'Disconnect',action:'disconnect'}]}})" class="btn btn-primary">Welsh Water</button>
+                            
+							<button ng-click="sendEvent({event: 'page', pageData:{pageName:'Charles Schwab - Own Your Tomorrow', headerImg: 'images/schwab-logo.png',  introText:'Owners are people who control their destiny by asking the tough questions and making changes. They make a plan and see it through.', bottomText:'At Schwab, we encourage our clients to be engaged in all aspects of their lives and to shape their financial future.', videoSrc:'https://www.youtube.com/embed/8y6buvXsyto?autoplay=1', pageButtons:[{name:'Disconnect',action:'disconnect'}]}})" class="btn btn-primary">Charles Schwab</button>
+
+							<button ng-click="sendEvent({event: 'page', pageData:{pageName:'SKY', headerImg: 'images/sky-logo.png',  introText:'Sky is Europes leading entertainment company. The group serves 20 million customers...', bottomText:'We offer the best and broadest range of content, deliver market-leading customer service and use innovative new technology to give customers a better TV experience, whenever and wherever they choose.', videoSrc:'https://www.youtube.com/embed/PVHV2yokXGA?autoplay=1', pageButtons:[{name:'Disconnect',action:'disconnect'}]}})" class="btn btn-primary">SKY</button>
+                            
+
+                        </div>
+					</div>
+
+				</form>
+			</div>
+			<div class="col-md-6">
+				<iframe ng-src="{{iframeSrc}}"  width="400" height="650">
+			</div>
+		</div>
+
+	</div>
+</div>

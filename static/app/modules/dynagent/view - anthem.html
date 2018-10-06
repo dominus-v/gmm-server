@@ -1,0 +1,42 @@
+<style>
+.btn {
+	margin-top:3px;
+	width:140px;
+	}
+</style>
+<div class="container-fluid">
+	<div class="jumbotron">
+		<div class="row">
+			<div class="col-md-6" style="">
+				<img src="images/ABCBS_Logo.png" class="img-responsive"/>
+				<h1>Agent Control</h1>
+				<p>Send events to mobile client...</p>
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="inputSessionId" class="col-sm-2 control-label">Session ID</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="inputSessionId" ng-model="inputSessionId">
+						</div>
+					</div>
+                    <div class="form-group">
+						<label class="col-sm-2 control-label">Documents</label>
+						<div class="col-sm-10">
+					          <button ng-click="sendEvent({event: 'gmmframe', pageData: { frameSrc:'http://gdemo.genesys.com/gbank/vivrAnthemDocs.jsp', cssFile: 'styles/vivr-anthem.css', 
+                              pageButtons:[{name:'Disconnect',action:'disconnect'}]}})" class="btn btn-primary">List of Documents</button>
+                    </div>
+					</div>  
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Miscellaneous Content</label>
+						<div class="col-sm-10">
+                            <button ng-click="sendEvent({event: 'page', pageData:{pageName:'Health insurance', headerImg: 'images/ABCBS_Logo.png', videoSrc:'https://www.youtube.com/embed/deOYBEAeiWU', introText: 'How much do you think individual health insurance costs? May be it is time to find out!', bottomText:'Anthem Blue Cross & Blue Shield - Doctor' , cssFile: 'styles/vivr-anthem.css', pageButtons:[{name:'Disconnect',action:'disconnect'}]}})" class="btn btn-primary">Doctor (video)</button>
+							<button ng-click="sendEvent({event: 'page', pageData:{pageName:'Thank you for your time', headerImg: 'images/ABCBS_Logo.png', centerImg:'images/thank_you.jpg', bottomText:'For the comprehensive information about Anthem Insurance Companies products and servicesplease visit our web site at https://www.anthem.com', cssFile: 'styles/vivr-anthem.css', pageButtons:[{name:'Disconnect',action:'disconnect'}]}})" class="btn btn-primary">Thanks</button>
+                        </div>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-6">
+				<iframe ng-src="{{iframeSrc}}"  width="400" height="650">
+			</div>
+		</div>
+	</div>
+</div>

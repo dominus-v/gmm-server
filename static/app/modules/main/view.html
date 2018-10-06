@@ -1,0 +1,15 @@
+<ng-switch on="module">
+    
+    <!-- Default -->
+    <welcome ng-switch-when="default" ng-controller="WelcomeCtrl"></welcome>
+    <welcome ng-switch-when="welcome" ng-controller="WelcomeCtrl"></welcome>
+    <start ng-switch-when="start" ng-controller="StartCtrl"></start>
+    <nosession ng-switch-when="nosession" ng-controller="NoSessionCtrl"></nosession>
+    <menu ng-switch-when="menu" ng-controller="MenuCtrl"></menu>
+    <page ng-switch-when="page" ng-controller="PageCtrl"></page>
+    <auth ng-switch-when="auth" ng-controller="AuthCtrl"></auth>
+    <comment ng-switch-when="comment" ng-controller="CommentCtrl"></comment>
+    <gmmframe ng-switch-when="gmmframe" ng-controller="GMMFrameCtrl"></gmmframe>
+    <dynagent ng-switch-when="dynagent" ng-controller="DynAgentCtrl"></dynagent>
+    
+<ng-switch>

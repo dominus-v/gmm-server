@@ -1,0 +1,42 @@
+<style>
+.btn {
+	margin-top:3px;
+	width:140px;
+	}
+</style>
+<div class="container-fluid">
+	<div class="jumbotron">
+		<div class="row">
+			<div class="col-md-6" style="">
+				<img src="images/hsbc-logo.gif" class="img-responsive"/>
+				<h1>Agent Control</h1>
+				<p>Send events to mobile client...</p>
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="inputSessionId" class="col-sm-2 control-label">Session ID</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="inputSessionId" ng-model="inputSessionId">
+						</div>
+					</div>
+                    <div class="form-group">
+						<label class="col-sm-2 control-label">Documents</label>
+						<div class="col-sm-10">
+					          <button ng-click="sendEvent({event: 'gmmframe', pageData: { frameSrc:'http://gdemo.genesys.com/gbank/vivrHSBCDocs.jsp', cssFile: 'styles/vivr-hsbc.css', 
+                              pageButtons:[{name:'Disconnect',action:'disconnect'}]}})" class="btn btn-primary">List of Documents</button>
+                    </div>
+					</div>  
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Miscellaneous Content</label>
+						<div class="col-sm-10">
+                            <button ng-click="sendEvent({event: 'page', pageData:{pageName:'Investment Outlook, Q4 2015', headerImg: 'images/hsbc-logo.gif', videoSrc:'https://www.youtube.com/embed/YJf7_4YZQJY?list=PLGwUcoTj1_2rslPBSTVqkrZimVt6UpX6L', introText: 'China recent currency policy changes have caused a ripple effect on markets, so what is next for the internationalisation of China renminbi?', bottomText:'HSBC Investment Outlook | China in transition' , cssFile: 'styles/vivr-hsbc.css', pageButtons:[{name:'Disconnect',action:'disconnect'}]}})" class="btn btn-primary">Investment Outlook</button>
+							<button ng-click="sendEvent({event: 'page', pageData:{pageName:'Thank you for your time', headerImg: 'images/hsbc-logo.gif', centerImg:'images/thank_you.jpg', bottomText:'For the comprehensive information about HSBC products and services please visit our web site at http://www.hsbc.com/', cssFile: 'styles/vivr-hsbc.css', pageButtons:[{name:'Disconnect',action:'disconnect'}]}})" class="btn btn-primary">Thanks</button>
+                        </div>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-6">
+				<iframe ng-src="{{iframeSrc}}"  width="400" height="650">
+			</div>
+		</div>
+	</div>
+</div>

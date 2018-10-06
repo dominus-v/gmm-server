@@ -1,0 +1,16 @@
+<div class="container-fluid">
+
+	<div class="jumbotron">
+		<img src="images/step.png" class="img-responsive"/>
+		<h1>Welcome</h1>
+		<p>Enter the session ID to commence</p>
+
+		<form name="startSessionForm" role="form" class="form-inline">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Session ID" id="txtSessionId" ng-model="inputSessionId" required/>
+			</div>
+			<a ng-click="startSession()" class="btn btn-primary" role="button" ng-disabled="startSessionForm.$invalid">Start</a>
+		</form>
+	</div>
+
+</div>

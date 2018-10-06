@@ -1,0 +1,205 @@
+.wallboard {
+    list-style: none;
+    padding: 5px 0 5px;
+    position: relative;
+}
+
+.wallboard-ticket {
+    float: left;
+    margin-right: 40px;
+    height: 100%;
+    font-size: 4em;
+}
+
+.wallboard-desk {
+    margin-right: 40px;
+    height: 100%;
+    font-size: 2em;
+}
+    .wallboard:before {
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        content: " ";
+        width: 3px;
+        background-color: #eeeeee;
+        margin-left: -1.5px;
+        left: 40px;
+    }
+
+    .wallboard > li {
+        margin-bottom: 5px;
+        position: relative;
+    }
+
+        .wallboard > li:before,
+        .wallboard > li:after {
+            content: " ";
+            display: table;
+        }
+
+        .wallboard > li:after {
+            clear: both;
+        }
+
+        .wallboard > li:before,
+        .wallboard > li:after {
+            content: " ";
+            display: table;
+        }
+
+        .wallboard > li:after {
+            clear: both;
+        }
+
+        .wallboard > li > .wallboard-panel {
+            width: 46%;
+            /*float: left;*/
+            border: 1px solid #d4d4d4;
+            border-radius: 2px;
+            padding: 20px;
+            position: relative;
+            -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+
+            width: calc(100% - 90px);
+            width: -moz-calc(100% - 90px);
+            width: -webkit-calc(100% - 90px);
+
+            float: right;
+        }
+
+            .wallboard > li > .wallboard-panel:before {
+                position: absolute;
+                top: 16px;
+                right: -15px;
+                display: inline-block;
+                border-top: 15px solid transparent;
+                border-left: 15px solid #ccc;
+                border-right: 0 solid #ccc;
+                border-bottom: 15px solid transparent;
+                content: " ";
+            }
+
+            .wallboard > li > .wallboard-panel:after {
+                position: absolute;
+                top: 17px;
+                right: -14px;
+                display: inline-block;
+                border-top: 14px solid transparent;
+                border-left: 14px solid #fff;
+                border-right: 0 solid #fff;
+                border-bottom: 14px solid transparent;
+                content: " ";
+            }
+
+        .wallboard > li > .wallboard-badge {
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            /*line-height: 50px;*/
+            font-size: 1.4em;
+            text-align: center;
+            position: absolute;
+            top: 16px;
+            /*left: 50%;*/
+            /*margin-left: -15px;*/
+            background-color: #999999;
+            z-index: 100;
+            border-top-right-radius: 50%;
+            border-top-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+
+            left: 25px;
+            margin-left: 0;
+            top: 16px;
+        }
+
+        .wallboard > li.wallboard-inverted > .wallboard-panel {
+            float: right;
+        }
+
+            .wallboard > li.wallboard-inverted > .wallboard-panel:before {
+                border-left-width: 0;
+                border-right-width: 15px;
+                left: -15px;
+                right: auto;
+            }
+
+            .wallboard > li.wallboard-inverted > .wallboard-panel:after {
+                border-left-width: 0;
+                border-right-width: 14px;
+                left: -14px;
+                right: auto;
+            }
+
+.wallboard-badge.primary {
+    background-color: #2e6da4 !important;
+}
+
+.wallboard-badge.success {
+    background-color: #3f903f !important;
+}
+
+.wallboard-badge.warning {
+    background-color: #f0ad4e !important;
+}
+
+.wallboard-badge.danger {
+    background-color: #d9534f !important;
+}
+
+.wallboard-badge.info {
+    background-color: #5bc0de !important;
+}
+
+.wallboard-title {
+    margin-top: 0;
+    color: inherit;
+}
+
+.wallboard-body > p,
+.wallboard-body > ul {
+    margin-bottom: 0;
+}
+
+    .wallboard-body > p + p {
+        margin-top: 5px;
+    }
+
+@media (max-width: 1800px) {
+    ul.wallboard:before {
+        left: 40px;
+    }
+
+    ul.wallboard > li > .wallboard-panel {
+        width: calc(100% - 90px);
+        width: -moz-calc(100% - 90px);
+        width: -webkit-calc(100% - 90px);
+    }
+
+    ul.wallboard > li > .wallboard-badge {
+        left: 25px;
+        margin-left: 0;
+        top: 16px;
+    }
+
+    ul.wallboard > li > .wallboard-panel {
+        float: right;
+    }
+
+        ul.wallboard > li > .wallboard-panel:before {
+            border-left-width: 0;
+            border-right-width: 15px;
+            left: -15px;
+            right: auto;
+        }
+
+        ul.wallboard > li > .wallboard-panel:after {
+            border-left-width: 0;
+            border-right-width: 14px;
+            left: -14px;
+            right: auto;
+        }
+}

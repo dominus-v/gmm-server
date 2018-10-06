@@ -1,0 +1,70 @@
+<style>
+.btn {
+	margin-top:3px;
+	width:140px;
+	}
+</style>
+<div class="container-fluid">
+
+	<div class="jumbotron">
+
+		<div class="row">
+			<div class="col-md-6" style="">
+
+				<img src="images/gbank-logo.png" class="img-responsive"/>
+				<h1>Agent Control</h1>
+				<p>Send events to mobile client...</p>
+
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="inputSessionId" class="col-sm-2 control-label">Session ID</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="inputSessionId" ng-model="inputSessionId">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Documents</label>
+						<div class="col-sm-10">
+					          <button ng-click="sendEvent({event: 'menu', pageData: { pageName:'My documents', headerImg: 'images/gbank-logo.png', introText:'Please select requered document', menuItems: [{name:'Certificate of Full Payment',action:'certificate'}]}})" class="btn btn-primary">List of Documents</button>
+
+                            <button ng-click="sendOrsEvent({event: 'gmm.select', action:'certificate'})" class="btn btn-primary">Certificate</button>
+                              
+                        </div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Miscellaneous Content</label>
+						<div class="col-sm-10">
+
+                            <button ng-click="sendEvent({event: 'page', pageData:{pageName:'GBank and Genesys', headerImg: 'images/gbank-logo.png', videoSrc:'http://www.youtube.com/embed/jva3iYsAg8A', introText:'GBank is powered by Genesys.', bottomText:'Published on Jun 20, 2014 Featuring Frost & Sullivan: Is it time to modernize your contact center? Genesys can help.', pageButtons:[{name:'Disconnect',action:'disconnect'}]}})" class="btn btn-primary">GBank and Genesys</button>
+
+							<button ng-click="sendEvent({event: 'page', pageData:{pageName:'Thank you for your time', headerImg: 'images/gbank-logo.png', centerImg:'images/thank_you.jpg', bottomText:'A comprehensive information about GBank products, services and offers can be found on the GBank web site.', pageButtons:[{name:'Disconnect',action:'disconnect'}]}})" class="btn btn-primary">Thanks</button>
+
+                            
+							<button ng-click="sendEvent({event: 'page', pageData:{pageName:'Thank You For Your Business', headerImg: 'images/gbank-logo.png', centerImg:'images/welove.jpg', introText:'GBank wants you to know how much we enjoy serving your banking needs and consider you a special customer.', bottomText:'As a token of our appreciation, we are preparing a Special Offer for you and will contact you soon.', pageButtons:[{name:'Disconnect',action:'disconnect'}]}})" class="btn btn-primary">Thanks & Offer</button>
+   		                                                  
+                        </div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Brokerage Account</label>
+						<div class="col-sm-10">
+                        
+                            <button ng-click="sendEvent({event: 'page', pageData:{pageName:'Brokerage Account', headerImg: 'images/gbank-logo.png', centerImg:'images/brk_acc_awareness.jpg', introText: 'Brokerage account gives you the ability to make your own investment decisions and to invest in a broad range of securities', bottomText:'Would you like to know more about GBank Brokerage Account?', pageButtons:[{name:'Yes',action:'brk_features'},{name:'No',action:'brk_no_interest'},{name:'Disconnect',action:'brk_disconnect'}]}})" class="btn btn-primary">Awareness</button>
+                        
+							<button ng-click="sendEvent({event: 'page', pageData:{pageName:'Brokerage Account', headerImg: 'images/gbank-logo.png', centerImg:'images/brk_acc_benefits.jpg', introText:'Key Features and Benefits', bottomText:'Please select next action', pageButtons:[{name:'Next',action:'brk_conditions'},{name:'Disconnect',action:'brk_disconnect'}]}})" class="btn btn-primary">Features</button>
+
+							<button ng-click="sendEvent({event: 'page', pageData:{pageName:'Brokerage Account', headerImg: 'images/gbank-logo.png', centerImg:'images/brk_acc_conditions.jpg', introText:'Terms and Conditions', bottomText:'Please select next action', pageButtons:[{name:'Back',action:'brk_features'}, {name:'Next',action:'thanks_offer'},{name:'Disconnect',action:'brk_disconnect'}]}})" class="btn btn-primary">Conditions</button>
+						</div>
+					</div>					
+                    
+				</form>
+			</div>
+			<div class="col-md-6">
+				<iframe ng-src="{{iframeSrc}}"  width="400" height="650">
+			</div>
+		</div>
+
+	</div>
+</div>

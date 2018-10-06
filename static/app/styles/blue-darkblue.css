@@ -1,0 +1,27 @@
+.btn-primary {
+  color: #FFFFFF;
+  background: #0066FF;
+ } 
+ 
+ .btn-primary[disabled] {
+    color: #E6E6E6;
+    background: #99CCFF
+	}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.open .dropdown-toggle.btn-primary {
+    color: #FFFFCC;
+    background: #0000CC;
+} 
+
+a.list-group-item {
+  color: #FFFFFF;
+  background: #0066FF;
+}
+
+a.list-group-item:hover,
+a.list-group-item:focus {
+  color: #FFFFCC;
+  background: #0000CC;
+} 

@@ -1,0 +1,33 @@
+/* VIVR styles*/
+a.list-group-item {
+    color: #ffffff;
+    background: #6d6d6d;
+}
+
+a.list-group-item:hover,
+a.list-group-item:focus {
+    color: #ffffff;
+    background: #505050;
+}
+
+.btn-primary {
+    color: #ffffff;
+    background: #de0011;
+}
+
+.btn-primary[disabled] {
+   color: #ffffff;
+    background: #de0011;
+    -webkit-filter: hue-rotate(40deg) opacity(50%);
+    filter: hue-rotate(40deg) opacity(50%);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.open .dropdown-toggle.btn-primary {
+    color: #ffffff;
+    background: #b1000e;
+}
+
+

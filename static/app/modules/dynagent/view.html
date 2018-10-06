@@ -1,0 +1,35 @@
+<style>
+.btn {
+	margin-top:3px;
+	width:140px;
+	}
+</style>
+<div class="container-fluid">
+	<div class="jumbotron">
+		<div class="row">
+			<div class="col-md-6" style="">
+				<img src="images/petco-logo.png" class="img-responsive"/>
+				<h1>Agent Control</h1>
+				<p>Send events to mobile client...</p>
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="inputSessionId" class="col-sm-2 control-label">Session ID</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="inputSessionId" ng-model="inputSessionId">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Miscellaneous Content</label>
+						<div class="col-sm-10">
+                            <button ng-click="sendEvent({event: 'page', pageData:{pageName:'PetcoNow', headerImg: 'images/petco-logo.png', videoSrc:'https://www.youtube.com/embed/RCkeqnHLYAY?list=PL79071DBC502D1297', introText: 'Want fast, reliable deliveries of your favorite Petco products?  Introducing PetcoNow, powered by Instacart.', bottomText:'We will deliver anything from our store to your door in 2 hours or less.' , cssFile: 'styles/vivr-petco.css', pageButtons:[{name:'Disconnect',action:'disconnect'}]}})" class="btn btn-primary">PetcoNow</button>
+							<button ng-click="sendEvent({event: 'page', pageData:{pageName:'Thank you for your time', headerImg: 'images/petco-logo.png', centerImg:'images/thank_you.jpg', bottomText:'For the comprehensive information about Petco products and services please visit our web site at http://www.petco.com/', cssFile: 'styles/vivr-petco.css', pageButtons:[{name:'Disconnect',action:'disconnect'}]}})" class="btn btn-primary">Thanks</button>
+                        </div>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-6">
+				<iframe ng-src="{{iframeSrc}}"  width="400" height="650">
+			</div>
+		</div>
+	</div>
+</div>

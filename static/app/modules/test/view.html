@@ -1,0 +1,60 @@
+<div class="container-fluid">
+
+	<div class="jumbotron">
+		<img src="images/genesys-logo.png" class="img-responsive"/>
+		<h1>Testing</h1>
+		<p>Fire events to clients...</p>
+
+		<form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label for="inputSessionId" class="col-sm-2 control-label">Session ID</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="inputSessionId" ng-model="inputSessionId">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Globals</label>
+				<div class="col-sm-10">
+					<button ng-click="sendEvent({event: 'navigate', path: 'start'})" class="btn btn-primary">Show Start</button>
+					<button ng-click="sendEvent({event: 'navigate', path: 'nosession'})" class="btn btn-primary">Show No Session</button>
+					<button ng-click="sendEvent({event: 'navigate', path: 'welcome'})" class="btn btn-primary">Show Welcome</button>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Authentication</label>
+				<div class="col-sm-10">
+					<button ng-click="sendEvent({event: 'auth', pageData:{pageName:'Sign In', headerImg: 'images/ms-logo.png', introText:'Sign in for personalized support from a Microsoft expert at Answer Desk', bottomText:''}})" class="btn btn-primary">Sign In Screen</button>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="col-sm-2 control-label">External Data</label>
+				<div class="col-sm-10">
+					<button ng-click="sendEvent({event: 'callback', pageData:{pageName:'Call Back', headerImg: 'images/ms-logo.png', introText:'We can call you back when one of our experts becomes free', bottomText:''}})" class="btn btn-primary">Call Back</button>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Pages Navigation</label>
+				<div class="col-sm-10">
+					<button ng-click="sendEvent({event: 'page', pageData:{pageName:'Microsoft Technical Support', headerImg: 'images/ms-logo.png',  introText:'Welcome microsoft technical support', bottomText:'An introduction to the mind-bending world of quantum computing. Learn how Microsoft is blending quantum physics with computer science', videoSrc:'http://www.youtube.com/embed/jg8iCnQTLfM?autoplay=1', pageButtons:[{name:'Button 1',action:'button1'},{name:'Button 2',action:'button2'}]}})" class="btn btn-primary">Quantum - Video</button>
+
+					<button ng-click="sendEvent({event: 'page', pageData:{pageName:'Microsoft Office Support', headerImg: 'images/ms-logo.png', centerImg:'images/ms-office.jpg', introText:'Welcome microsoft technical support', bottomText:'An introduction to the mind-bending world of quantum computing. Learn how Microsoft is blending quantum physics with computer science', pageButtons:[{name:'Button 4',action:'button4'},{name:'Button 5',action:'button5'}]}})" class="btn btn-primary">Office - No Video</button>
+
+					<button ng-click="sendEvent({event: 'page', pageData:{pageName:'Ask and Expert', headerImg: 'images/ms-logo.png', centerImg:'images/ms-tech.png', introText:'Welcome microsoft technical support', bottomText:'An introduction to the mind-bending world of quantum computing. Learn how Microsoft is blending quantum physics with computer science', pageButtons:[{name:'Button 4',action:'button4'},{name:'Button 5',action:'button5'}]}})" class="btn btn-primary">Expert - No Video</button>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Menu Navigation</label>
+				<div class="col-sm-10">
+					<button ng-click="sendEvent({event: 'menu', pageData: { pageName:'Reason for call', headerImg: 'images/ms-logo.png', introText:'Please tell us the reason for your call today', menuItems: [{name:'Push test 1',action:'none'},{name:'Push test 2',action:'none'}]}})" class="btn btn-primary">Show Menu 1</button>
+
+					<button ng-click="sendEvent({event: 'menu', pageData: { pageName:'Office Product', headerImg: 'images/ms-logo.png', introText:'Please choose from one of the following Microsoft Office products', menuItems: [{name:'Push test 3',action:'none'},{name:'Push test 4',action:'none'}]}})" class="btn btn-primary">Show Menu 2</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
